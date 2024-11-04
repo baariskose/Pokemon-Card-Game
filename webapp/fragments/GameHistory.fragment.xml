@@ -1,0 +1,41 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+    <Dialog id="idGameHistory" title="Game History">
+        <content>
+            <Table
+				 id="idGameHistoryTable" items="{game>/gameHistory}">
+                <columns >
+                    <Column>
+                        <Text text="Kullanıcı" />
+                    </Column>
+                    <Column>
+                        <Text text="Zorluk" />
+                    </Column>
+                    <Column>
+                        <Text text="Süre" />
+                    </Column>
+                    <Column>
+                        <Text text="Tarih" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem >
+                        <cells>
+                        <Text text="{game>username}" />
+                        <Text text="{game>difficulty}" />
+                        <Text text="{game>time}" />
+                        <Text text="{game>date}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table> 
+        </content>
+
+         <buttons>
+       
+        <Button type ="Accept" icon="sap-icon://accept" press=".onCloseHistory"/>
+    </buttons> 
+    </Dialog>
+</c:FragmentDefinition>
